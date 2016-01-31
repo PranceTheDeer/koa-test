@@ -4,9 +4,12 @@
  */
 var koa = require('koa');
 var app = koa();
+var achievements = require('./controllers/achievements.controller.js');
+
+achievements.getAllAchievements();
 
 app.use(function *() {
-    this.body = 'Hello World!';
+    achievements.getAllAchievements();
 });
 
 app.listen(3000);
