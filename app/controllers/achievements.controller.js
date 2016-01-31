@@ -18,13 +18,7 @@ function getAllAchievements() {
     var options = {
         'uri': 'https://api.guildwars2.com/v2/achievements/daily',
         json: true
-        //hostname: 'api.guildwars2.com',
-        //path: '/v2/achievements/daily',
-        //port: '80',
-        //method: 'GET',
-        //protocol: 'https:'
     };
-    console.log('Inside the function');
     rp(options)
         .then(function (res) {
             getAchievementInfo(res.pve);
